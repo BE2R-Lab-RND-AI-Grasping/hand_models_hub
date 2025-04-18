@@ -62,7 +62,7 @@
           <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Link_left_flexion" contype="1" conaffinity="0" density="0" group="1" class="visualgeom"/>
           <body name="Link_left_finray_proxy" pos="-0.0069587 0.049513 -0.0045">
             <inertial pos="-0.001736 0.022618 -0.009800" quat="-1.561525959141133e-05 0.4229383694155905 0.9061584482632186 4.5535051240073894e-05" mass="0.014125" diaginertia="1.206813e-09 5.907188e-09 6.144261e-09"/>
-            <joint name="Joint_left_finray_proxy" pos="0 0 0" axis="0 0 1" range="0 70" stiffness="0.1" springref="-74"/>
+            <joint name="Joint_left_finray_proxy" pos="0 0 0" axis="0 0 1" range="0 70" stiffness="0" springref="-74"/>
             <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Link_left_finray_proxy" contype="1" conaffinity="0" density="0" group="1" class="visualgeom"/>
             <site name="Site_left_connector2" pos="0.0220975 0.0116918 0" size="0.003"/>
           </body>
@@ -89,7 +89,7 @@
           <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Link_right_flexion" contype="1" conaffinity="0" density="0" group="1" class="visualgeom"/>
           <body name="Link_right_finray_proxy" pos="-0.0069587 0.049513 0.0048">
             <inertial pos="-0.001736 0.022618 0.010000" quat="-1.0457691563451743e-05 0.4229366756220633 0.9061592392617048 3.748389642000896e-05" mass="0.014125" diaginertia="1.206821e-09 5.907223e-09 6.144301e-09"/>
-            <joint name="Joint_right_finray_proxy" pos="0 0 0" axis="0 0 1" range="0 70" stiffness="0.1" springref="-74"/>
+            <joint name="Joint_right_finray_proxy" pos="0 0 0" axis="0 0 1" range="0 70" stiffness="0" springref="-74"/>
             <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Link_right_finray_proxy" contype="1" conaffinity="0" density="0" group="1" class="visualgeom"/>
             <site name="Site_right_connector2" pos="0.0220975 0.0116918 0" size="0.003"/>
           </body>
@@ -120,7 +120,7 @@
             <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Link_thumb_flexion" contype="1" conaffinity="0" density="0" group="1" class="visualgeom"/>
             <body name="Link_thumb_finray_proxy" pos="-0.049513 0.0069587 -0.0048">
               <inertial pos="-0.022618 0.001736 -0.010000" quat="0.9398127342616509 3.3899821964835085e-05 -1.9110412724092084e-05 0.34168995157193854" mass="0.014125" diaginertia="1.206821e-09 5.907223e-09 6.144301e-09"/>
-              <joint name="Joint_thumb_finray_proxy" pos="0 0 0" axis="0 0 -1" range="0 70" stiffness="0.1" springref="-74"/>
+              <joint name="Joint_thumb_finray_proxy" pos="0 0 0" axis="0 0 -1" range="0 70" stiffness="0" springref="-74"/>
               <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Link_thumb_finray_proxy" contype="1" conaffinity="0" density="0" group="1" class="visualgeom"/>
               <site name="Site_thumb_connector2" pos="-0.0116918 -0.0220975 0" size="0.003"/>
             </body>
@@ -146,11 +146,15 @@
     <position name="Joint_right_abduction_p" joint="Joint_right_abduction" ctrlrange="0 90" timeconst="1"/>
     <position name="Joint_thumb_abduction_p" joint="Joint_thumb_abduction" ctrlrange="0 90" timeconst="1"/>
 
-    <position name="Joint_thumb_rotation_p" joint="Joint_thumb_rotation" ctrlrange="-90 90" timeconst="1"/>
+    <position name="Joint_left_flexion_p" joint="Joint_left_flexion" ctrlrange="0 90" timeconst="1"/>
+    <position name="Joint_right_flexion_p" joint="Joint_right_flexion" ctrlrange="0 90" timeconst="1"/>
+    <position name="Joint_thumb_flexion_p" joint="Joint_thumb_flexion" ctrlrange="0 90" timeconst="1"/>
 
-    <position name="Joint_left_dynamixel_crank_p" joint="Joint_left_dynamixel_crank" ctrlrange="0 90" timeconst="1"/>
-    <position name="Joint_right_dynamixel_crank_p" joint="Joint_right_dynamixel_crank" ctrlrange="0 90" timeconst="1"/>
-    <position name="Joint_thumb_dynamixel_crank_p" joint="Joint_thumb_dynamixel_crank" ctrlrange="0 90" timeconst="1"/>
+    <position name="Joint_left_finray_proxy_p" joint="Joint_left_finray_proxy" ctrlrange="0 70" timeconst="1"/>
+    <position name="Joint_right_finray_proxy_p" joint="Joint_right_finray_proxy" ctrlrange="0 70" timeconst="1"/>
+    <position name="Joint_thumb_finray_proxy_p" joint="Joint_thumb_finray_proxy" ctrlrange="0 70" timeconst="1"/>
+
+    <position name="Joint_thumb_rotation_p" joint="Joint_thumb_rotation" ctrlrange="-90 90" timeconst="1"/>
 
   </actuator>
 
