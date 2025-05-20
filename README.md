@@ -1,4 +1,10 @@
-### Models hub
+# Models hub
+
+The antropomorphic hand model for the project
+
+# Environment configuration
+
+
 
 The closed-chain kinematics is the primary hand model ("DP-Flex_closed_kinematics.xml"), utilizing an underactuated five-bar spring-loaded mechanism.
 
