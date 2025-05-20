@@ -30,18 +30,18 @@ The project has 1 model for closed-chained underactuatied fingers mechanism and 
 ``` 
 
 
-The **closed-chain** kinematics is the primary hand model ("DP-Flex_closed_kinematics.xml"), utilizing an **underactuated five-bar spring-loaded mechanism**.
+The **closed-chain** kinematics is the primary hand model ("DP-Flex_closed_kinematics.xml" at left), utilizing an **underactuated five-bar spring-loaded mechanism**.
 
-The **open-chain** kinematics model ("DP-Flex_opened_kinematics.xml") is provided to **enable control without underactuation**.  
+The **open-chain** kinematics model ("DP-Flex_opened_kinematics.xml" at right) is provided to **enable control without underactuation**.  
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4267919f-f0b3-4eed-8811-b2fb24fa1e07" height="300px" />
   <img src="https://github.com/user-attachments/assets/388905f2-74cc-44e9-936a-550df6bad1c4" height="300px" />
 </p>
 
-The **open-chain kinematics** model ("DIP-Flex_opened_kinematics_primitive.xml"), which replaces meshes **with primitives**, allows for **faster hand collision simulation**. 
+The **open-chain kinematics** model ("DIP-Flex_opened_kinematics_primitive.xml" at left), which replaces meshes **with primitives**, allows for **faster hand collision simulation**. 
 
-For comparison, a model containing **both primitives and meshes** ("DIP-Flex_opened_kinematics_primitive_and_mesh.xml") is also provided.   
+For comparison, a model containing **both primitives and meshes** ("DIP-Flex_opened_kinematics_primitive_and_mesh.xml" at right) is also provided.   
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/62238895-d168-49c5-8cf8-e7477b078d3d" height="350px" />
