@@ -34,17 +34,17 @@ The **closed-chain** kinematics is the primary hand model ("DP-Flex_closed_kinem
 
 The open-chain kinematics model ("DP-Flex_opened_kinematics.xml") is provided to enable control without underactuation.  
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+<p align="center">
   <img src="https://github.com/user-attachments/assets/4267919f-f0b3-4eed-8811-b2fb24fa1e07" height="300px" />
   <img src="https://github.com/user-attachments/assets/388905f2-74cc-44e9-936a-550df6bad1c4" height="300px" />
-</div>
-
+</p>
 
 The **open-chain kinematics** model ("DIP-Flex_opened_kinematics_primitive.xml"), which replaces meshes with primitives, allows for faster hand simulation. 
 
 For comparison, a model containing both primitives and meshes ("DIP-Flex_opened_kinematics_primitive_and_mesh.xml") is also provided.   
 
-<img src="https://github.com/user-attachments/assets/62238895-d168-49c5-8cf8-e7477b078d3d" height="350px" />
-<img src="https://github.com/user-attachments/assets/c1374c06-0b0e-4f89-b4a5-7d447af38d54" height="350px" />
-
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/62238895-d168-49c5-8cf8-e7477b078d3d" height="350px" />
+    <img src="https://github.com/user-attachments/assets/c1374c06-0b0e-4f89-b4a5-7d447af38d54" height="350px" />
+</p>
 
