@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="DIP-Flex">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0028293 -0.047722 -0.012537"
+        rpy="0 0 0" />
+      <mass
+        value="0.35144" />
+      <inertia
+        ixx="0.00020696"
+        ixy="-2.9303E-06"
+        ixz="-1.9393E-06"
+        iyy="0.00023826"
+        iyz="1.1648E-05"
+        izz="0.0003317" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_pinkie_abduction">
+    <inertial>
+      <origin
+        xyz="0.0087427 0.0066478 -0.0042803"
+        rpy="0 0 0" />
+      <mass
+        value="0.014579" />
+      <inertia
+        ixx="4.7846E-06"
+        ixy="-6.8073E-07"
+        ixz="1.0343E-06"
+        iyy="3.977E-06"
+        iyz="5.3491E-07"
+        izz="3.9977E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_pinkie_abduction.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_pinkie_abduction.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_pinkie_abduction"
+    type="revolute">
+    <origin
+      xyz="-0.022 0 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_pinkie_abduction" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_pinkie_PPflexion">
+    <inertial>
+      <origin
+        xyz="0.023519 -0.0040969 -9.2833E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.037156" />
+      <inertia
+        ixx="4.6214E-06"
+        ixy="-7.5236E-08"
+        ixz="5.4001E-09"
+        iyy="1.1682E-05"
+        iyz="8.4543E-11"
+        izz="8.076E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_pinkie_PPflexion.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_pinkie_PPflexion.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_pinkie_PPflexion"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0135"
+      rpy="-1.5708 -0.13963 0" />
+    <parent
+      link="Link_pinkie_abduction" />
+    <child
+      link="Link_pinkie_PPflexion" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_pinkie_DPflexion">
+    <inertial>
+      <origin
+        xyz="0.008247 0.011323 -0.00021313"
+        rpy="0 0 0" />
+      <mass
+        value="0.048224" />
+      <inertia
+        ixx="4.397E-06"
+        ixy="-1.9003E-07"
+        ixz="-2.7665E-09"
+        iyy="4.4537E-06"
+        iyz="1.0601E-09"
+        izz="5.7982E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_pinkie_DPflexion.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_pinkie_DPflexion.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_pinkie_DPflexion"
+    type="revolute">
+    <origin
+      xyz="0.05 0 0"
+      rpy="0 0 -0.34703" />
+    <parent
+      link="Link_pinkie_PPflexion" />
+    <child
+      link="Link_pinkie_DPflexion" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_pinkie_dynamixel_crank">
+    <inertial>
+      <origin
+        xyz="-0.0292246746907062 -0.000345548761140353 -0.00845468363956931"
+        rpy="0 0 0" />
+      <mass
+        value="0.00941502690916122" />
+      <inertia
+        ixx="8.20147599149165E-07"
+        ixy="-5.36588990640207E-08"
+        ixz="7.16953208413575E-07"
+        iyy="4.29356002353824E-06"
+        iyz="3.58291955862425E-08"
+        izz="3.87228786714618E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_pinkie_dynamixel_crank.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_pinkie_dynamixel_crank.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_pinkie_dynamixel_crank"
+    type="revolute">
+    <origin
+      xyz="0.034 0 -0.0065"
+      rpy="1.5708 -1.1692 3.1416" />
+    <parent
+      link="Link_pinkie_abduction" />
+    <child
+      link="Link_pinkie_dynamixel_crank" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_pinkie_crank_pusher">
+    <inertial>
+      <origin
+        xyz="0.0275328245071411 0 -1.27017794623319E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0133255356350003" />
+      <inertia
+        ixx="5.43386571543801E-07"
+        ixy="1.24077091882954E-22"
+        ixz="5.83384570152099E-09"
+        iyy="4.4996231355158E-06"
+        iyz="-2.9710899198672E-22"
+        izz="4.09925527639265E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_pinkie_crank_pusher.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_pinkie_crank_pusher.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_pinkie_crank_pusher"
+    type="revolute">
+    <origin
+      xyz="-0.062 0 0"
+      rpy="0 0 0.44952" />
+    <parent
+      link="Link_pinkie_dynamixel_crank" />
+    <child
+      link="Link_pinkie_crank_pusher" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_index_abduction">
+    <inertial>
+      <origin
+        xyz="0.00874274235350639 -0.00664780581666861 -0.00428030979241301"
+        rpy="0 0 0" />
+      <mass
+        value="0.0145790130732545" />
+      <inertia
+        ixx="4.78455254824815E-06"
+        ixy="6.80733495122671E-07"
+        ixz="1.03428181706885E-06"
+        iyy="3.9769860703188E-06"
+        iyz="-5.34907433196257E-07"
+        izz="3.99768967574518E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_index_abduction.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_index_abduction.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_index_abduction"
+    type="revolute">
+    <origin
+      xyz="0.022 0 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_index_abduction" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_index_PPflexion">
+    <inertial>
+      <origin
+        xyz="0.0235185342427003 -0.00409688207008791 -0.000291063159982199"
+        rpy="0 0 0" />
+      <mass
+        value="0.0371562731973408" />
+      <inertia
+        ixx="4.62135242171689E-06"
+        ixy="-7.52362588284154E-08"
+        ixz="-5.86707955214807E-09"
+        iyy="1.16815369935923E-05"
+        iyz="1.37756575782698E-11"
+        izz="8.07596220519765E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_index_PPflexion.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_index_PPflexion.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_index_PPflexion"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0135"
+      rpy="-1.5708 -0.13963 0" />
+    <parent
+      link="Link_index_abduction" />
+    <child
+      link="Link_index_PPflexion" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_index_DPflexion">
+    <inertial>
+      <origin
+        xyz="0.0199696183371763 0.00918914760704684 -0.000300157294581504"
+        rpy="0 0 0" />
+      <mass
+        value="0.0184277477667582" />
+      <inertia
+        ixx="1.43462601504243E-06"
+        ixy="1.61795740718875E-07"
+        ixz="-4.04667659485777E-12"
+        iyy="3.17584048972688E-06"
+        iyz="3.80685705300134E-11"
+        izz="3.35051757481269E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_index_DPflexion.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_index_DPflexion.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_index_DPflexion"
+    type="revolute">
+    <origin
+      xyz="0.05 0 0"
+      rpy="0 0 -0.34703" />
+    <parent
+      link="Link_index_PPflexion" />
+    <child
+      link="Link_index_DPflexion" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_index_dynamixel_crank">
+    <inertial>
+      <origin
+        xyz="-0.0292246746907062 -0.000345548761140346 0.00815468363956827"
+        rpy="0 0 0" />
+      <mass
+        value="0.00941502690916122" />
+      <inertia
+        ixx="8.20147599149164E-07"
+        ixy="-5.36588990640217E-08"
+        ixz="-7.16953208413575E-07"
+        iyy="4.29356002353824E-06"
+        iyz="-3.58291955862427E-08"
+        izz="3.87228786714618E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_index_dynamixel_crank.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_index_dynamixel_crank.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_index_dynamixel_crank"
+    type="revolute">
+    <origin
+      xyz="0.034 0 -0.0065"
+      rpy="1.5708 -1.1692 -3.1416" />
+    <parent
+      link="Link_index_abduction" />
+    <child
+      link="Link_index_dynamixel_crank" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_index_crank_pusher">
+    <inertial>
+      <origin
+        xyz="0.0275328245071411 -6.93889390390723E-18 -0.000287298220537673"
+        rpy="0 0 0" />
+      <mass
+        value="0.0133255356350003" />
+      <inertia
+        ixx="5.43386571543801E-07"
+        ixy="-3.30872245021211E-24"
+        ixz="-5.8338457015215E-09"
+        iyy="4.4996231355158E-06"
+        iyz="-2.70297582572875E-23"
+        izz="4.09925527639265E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_index_crank_pusher.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_index_crank_pusher.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_index_crank_pusher"
+    type="revolute">
+    <origin
+      xyz="-0.062 0 0"
+      rpy="0 0 0.44952" />
+    <parent
+      link="Link_index_dynamixel_crank" />
+    <child
+      link="Link_index_crank_pusher" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_thumb_rotation">
+    <inertial>
+      <origin
+        xyz="-0.0113435912048131 -1.79717352111197E-15 0.00225278282682921"
+        rpy="0 0 0" />
+      <mass
+        value="0.00539304419111415" />
+      <inertia
+        ixx="7.87300871275679E-07"
+        ixy="2.77841156503349E-21"
+        ixz="1.38293079441149E-08"
+        iyy="4.45908566363792E-07"
+        iyz="2.97108208994536E-22"
+        izz="1.19077364674107E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_thumb_rotation.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_thumb_rotation.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_thumb_rotation"
+    type="revolute">
+    <origin
+      xyz="0.0392 -0.031 -0.062"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_thumb_rotation" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_thumb_abduction">
+    <inertial>
+      <origin
+        xyz="0.00874274235350637 -0.0066478058166683 -0.00428030979241405"
+        rpy="0 0 0" />
+      <mass
+        value="0.0145790130732544" />
+      <inertia
+        ixx="4.78455254824815E-06"
+        ixy="6.80733495122668E-07"
+        ixz="1.03428181706885E-06"
+        iyy="3.97698607031879E-06"
+        iyz="-5.34907433196256E-07"
+        izz="3.99768967574517E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_thumb_abduction.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_thumb_abduction.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_thumb_abduction"
+    type="revolute">
+    <origin
+      xyz="0 0.021 0.02"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="Link_thumb_rotation" />
+    <child
+      link="Link_thumb_abduction" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_thumb_PPflexion">
+    <inertial>
+      <origin
+        xyz="0.0235185342427004 -0.0040968820700879 -0.000291063159982181"
+        rpy="0 0 0" />
+      <mass
+        value="0.0371562731973409" />
+      <inertia
+        ixx="4.6213524217169E-06"
+        ixy="-7.52362588284173E-08"
+        ixz="-5.86707955214523E-09"
+        iyy="1.16815369935923E-05"
+        iyz="1.37756575693632E-11"
+        izz="8.07596220519765E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_thumb_PPflexion.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_thumb_PPflexion.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_thumb_PPflexion"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0135"
+      rpy="-1.5708 -0.13963 0" />
+    <parent
+      link="Link_thumb_abduction" />
+    <child
+      link="Link_thumb_PPflexion" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_thumb_DPflexion">
+    <inertial>
+      <origin
+        xyz="0.0199696183336325 0.0091891476066536 -0.000300157296094519"
+        rpy="0 0 0" />
+      <mass
+        value="0.0184277477659467" />
+      <inertia
+        ixx="1.43462601556026E-06"
+        ixy="1.61795740579052E-07"
+        ixz="-4.04660058342983E-12"
+        iyy="3.17584048737646E-06"
+        iyz="3.80684313698684E-11"
+        izz="3.35051757173837E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_thumb_DPflexion.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_thumb_DPflexion.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_thumb_DPflexion"
+    type="revolute">
+    <origin
+      xyz="0.05 0 0"
+      rpy="0 0 -0.34703" />
+    <parent
+      link="Link_thumb_PPflexion" />
+    <child
+      link="Link_thumb_DPflexion" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_thumb_dynamixel_crank">
+    <inertial>
+      <origin
+        xyz="-0.0292246746907062 -0.000345548761140353 0.00815468363956932"
+        rpy="0 0 0" />
+      <mass
+        value="0.00941502690916121" />
+      <inertia
+        ixx="8.20147599149164E-07"
+        ixy="-5.36588990640231E-08"
+        ixz="-7.16953208413575E-07"
+        iyy="4.29356002353823E-06"
+        iyz="-3.58291955862436E-08"
+        izz="3.87228786714617E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_thumb_dynamixel_crank.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_thumb_dynamixel_crank.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_thumb_dynamixel_crank"
+    type="revolute">
+    <origin
+      xyz="0.034 0 -0.0065"
+      rpy="1.5708 -1.1692 3.1416" />
+    <parent
+      link="Link_thumb_abduction" />
+    <child
+      link="Link_thumb_dynamixel_crank" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_thumb_crank_pusher">
+    <inertial>
+      <origin
+        xyz="0.0275328245071411 -5.55111512312578E-17 -0.000287298220537677"
+        rpy="0 0 0" />
+      <mass
+        value="0.0133255356350003" />
+      <inertia
+        ixx="5.433865715438E-07"
+        ixy="2.86204491943348E-22"
+        ixz="-5.83384570152056E-09"
+        iyy="4.4996231355158E-06"
+        iyz="-1.64141639122558E-22"
+        izz="4.09925527639265E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_thumb_crank_pusher.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/Link_thumb_crank_pusher.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_thumb_crank_pusher"
+    type="revolute">
+    <origin
+      xyz="-0.062 0 0"
+      rpy="0 0 0.44952" />
+    <parent
+      link="Link_thumb_dynamixel_crank" />
+    <child
+      link="Link_thumb_crank_pusher" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
