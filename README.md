@@ -24,8 +24,8 @@ The project has 1 model for closed-chained underactuatied fingers mechanism and 
         |+-- assets
         |+-- DIP-Flex.urdf # Oginal URDF model
         |+-- DIP-Flex_opened_kinematics.xml # Model without underactuations
-        |+-- DIP-Flex_opened_kinematics_primitive.xml (WIP) # Model for faster collision simulation
-        |+-- DIP-Flex_opened_kinematics_primitive_and_mesh.xml (WIP # Model for faster collision simulation + original meshes for comparison
+        |+-- DIP-Flex_opened_kinematics_primitive.xml **(WIP)** # Model for faster collision simulation
+        |+-- DIP-Flex_opened_kinematics_primitive_and_mesh.xml **(WIP)** # Model for faster collision simulation + original meshes for comparison
         |+-- run opened chain.ipynb # Quick start script
 ``` 
 
