@@ -15,24 +15,24 @@ conda activate DIP-Flex_env
 The project has 1 model for closed-chained underactuatied fingers mechanism and 4 models with open-chained models. 2 scripts are added for the quick start.
 
 ```bash
-    |-- DIP-FLEX_code
-    |-- assets
-
-    |-- DIP-Flex_closed_kinematics.xml
-
-    |-- DIP-Flex_opened_kinematics.urdf
-    |-- DIP-Flex_opened_kinematics.xml
-    |-- DIP-Flex_opened_kinematics_primitive.xml
-    |-- DIP-Flex_opened_kinematics_primitive_and_mesh.xml
-
-    |-- DIP-Flex run closed chain.ipynb
-    |-- DIP-Flex run opened chain.ipynb
++-- DIP-FLEX
+    |+-- closed_chain
+        |+-- assets
+        |+-- DIP-Flex_closed_kinematics.xml # Underactuated five-bar spring-loaded mechanism
+        |+-- run closed chain.ipynb # Quick start script
+    |+-- opened_chain
+        |+-- assets
+        |+-- DIP-Flex.urdf # Oginal URDF model
+        |+-- DIP-Flex_opened_kinematics.xml # Model without underactuations
+        |+-- DIP-Flex_opened_kinematics_primitive.xml (WIP) # Model for faster collision simulation
+        |+-- DIP-Flex_opened_kinematics_primitive_and_mesh.xml (WIP # Model for faster collision simulation + original meshes for comparison
+        |+-- run opened chain.ipynb # Quick start script
 ``` 
 
 
-The **closed-chain** kinematics is the primary hand model ("DP-Flex_closed_kinematics.xml" at left), utilizing an **underactuated five-bar spring-loaded mechanism**.
+The **closed-chain** kinematics is the primary hand model ("DIP-Flex_closed_kinematics.xml" at left), utilizing an **underactuated five-bar spring-loaded mechanism**.
 
-The **open-chain** kinematics model ("DP-Flex_opened_kinematics.xml" at right) is provided to **enable control without underactuation**.  
+The **open-chain** kinematics model ("DIP-Flex_opened_kinematics.xml" at right) is provided to **enable control without underactuation**.  
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4267919f-f0b3-4eed-8811-b2fb24fa1e07" height="300px" />
