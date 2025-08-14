@@ -1,0 +1,96 @@
+<mujoco model="MuJoCo Model">
+  <compiler angle="radian"/>
+
+  <option timestep="1e-05" gravity="0 0 0" integrator="implicitfast"/>
+
+  <default>
+    <joint armature="0.01" frictionloss="0.01"/>
+    <geom conaffinity="2" condim="4" friction="0.9 0.2 0.2" solref="0.001"/>
+
+    <equality solref="1e-06 30"/>
+    <general ctrllimited="true" biastype="affine" gainprm="1000000" biasprm="0 -1000000"/>
+  </default>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="1 1 1" rgb2="1 1 1" width="265" height="1590"/>
+    <texture type="2d" name="grid" builtin="checker" rgb1="0.1 0.2 0.3" rgb2="0.2 0.3 0.4" width="300" height="300"/>
+    <material name="grid" texture="grid" texrepeat="10 10" reflectance="0.2"/>
+  </asset>
+
+  <worldbody>
+    <geom name="fingers_bbox" size="0.0225 0.0575 0.043" pos="-0.0125 0 -0.025" type="box" rgba="0 1 0 0.2"/>
+    <light pos="0 0 10" dir="0 0 -1"/>
+    <body name="ID1_ROT" pos="0 0.045 0">
+      <geom name="ID1_ROT_geom" size="0.0225 0.0125 0.018" pos="-0.0125 0 0" type="box" rgba="0.5 0.5 0.5 0.5"/>
+      <body name="ID1_ABD" pos="-0.0395 0 0.07" quat="0.707107 0 0.707107 0">
+        <joint name="ID1_ROT_joint" pos="0.07 0 0.0395" axis="-1 0 0" range="-1.5708 0"/>
+        <geom name="ID1_ABD_geom" size="0.031 0.0125 0.018" pos="0.021 0 0" type="box" rgba="0.5 0.5 0.5 0.5"/>
+        <body name="ID1_PIP" pos="0 0 0.0395" quat="0.707107 -0.707107 0 0">
+          <joint name="ID1_ABD_joint" pos="0 0.0395 0" axis="0 -1 0" range="-1.5708 1.5708"/>
+          <geom name="ID1_PIP_geom" size="0.024 0.0165 0.021" pos="0.0136 0.0035 0" type="box" rgba="0.5 0.5 0.5 0.5"/>
+          <body name="ID1_DIP" pos="-0.07 0 0">
+            <joint name="ID1_PIP_joint" pos="0.07 0 0" axis="0 0 1" range="0 1.5708"/>
+            <geom name="ID1_DIP_geom" size="0.035 0.0125 0.021" pos="0.035 0 0" type="box" rgba="1 0.5 0.5 0.5"/>
+            <body name="ID1_FIN" pos="-0.07 0 0">
+              <joint name="ID1_DIP_joint" pos="0.07 0 0" axis="0 0 1" range="0 1.5708"/>
+              <geom name="ID1_FIN_geom" size="0.035 0.0175 0.0175" pos="0.035 0 0" type="box" rgba="1 0.5 0.5 0.5"/>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="ID2_ROT" pos="0 -0.045 0">
+      <geom name="ID2_ROT_geom" size="0.0225 0.0125 0.018" pos="-0.0125 0 0" type="box" rgba="0.5 0.5 0.5 0.5"/>
+      <body name="ID2_ABD" pos="-0.0395 0 0.07" quat="0.707107 0 0.707107 0">
+        <joint name="ID2_ROT_joint" pos="0.07 0 0.0395" axis="-1 0 0" range="-1.5708 0"/>
+        <geom name="ID2_ABD_geom" size="0.031 0.0125 0.018" pos="0.021 0 0" type="box" rgba="0.5 0.5 0.5 0.5"/>
+        <body name="ID2_PIP" pos="0 0 0.0395" quat="0.707107 -0.707107 0 0">
+          <joint name="ID2_ABD_joint" pos="0 0.0395 0" axis="0 -1 0" range="-1.5708 1.5708"/>
+          <geom name="ID2_PIP_geom" size="0.024 0.0165 0.021" pos="0.0136 0.0035 0" type="box" rgba="0.5 0.5 0.5 0.5"/>
+          <body name="ID2_DIP" pos="-0.07 0 0">
+            <joint name="ID2_PIP_joint" pos="0.07 0 0" axis="0 0 1" range="0 1.5708"/>
+            <geom name="ID2_DIP_geom" size="0.035 0.0125 0.021" pos="0.035 0 0" type="box" rgba="1 0.5 0.5 0.5"/>
+            <body name="ID2_FIN" pos="-0.07 0 0">
+              <joint name="ID2_DIP_joint" pos="0.07 0 0" axis="0 0 1" range="0 1.5708"/>
+              <geom name="ID2_FIN_geom" size="0.035 0.0175 0.0175" pos="0.035 0 0" type="box" rgba="1 0.5 0.5 0.5"/>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="ID3_ROT" pos="0 0 -0.05" quat="0 0.707107 0 0.707107">
+      <geom name="ID3_ROT_geom" size="0.0225 0.0125 0.018" pos="-0.0125 0 0" type="box" rgba="0.5 0.5 0.5 0.5"/>
+      <body name="ID3_ABD" pos="-0.0395 0 0.07" quat="0.707107 0 0.707107 0">
+        <joint name="ID3_ROT_joint" pos="0.07 0 0.0395" axis="-1 0 0" range="-1.5708 0"/>
+        <geom name="ID3_ABD_geom" size="0.031 0.0125 0.018" pos="0.021 0 0" type="box" rgba="0.5 0.5 0.5 0.5"/>
+        <body name="ID3_PIP" pos="0 0 0.0395" quat="0.707107 -0.707107 0 0">
+          <joint name="ID3_ABD_joint" pos="0 0.0395 0" axis="0 -1 0" range="-1.5708 1.5708"/>
+          <geom name="ID3_PIP_geom" size="0.024 0.0165 0.021" pos="0.0136 0.0035 0" type="box" rgba="0.5 0.5 0.5 0.5"/>
+          <body name="ID3_DIP" pos="-0.07 0 0">
+            <joint name="ID3_PIP_joint" pos="0.07 0 0" axis="0 0 1" range="0 1.5708"/>
+            <geom name="ID3_DIP_geom" size="0.035 0.0125 0.021" pos="0.035 0 0" type="box" rgba="1 0.5 0.5 0.5"/>
+            <body name="ID3_FIN" pos="-0.07 0 0">
+              <joint name="ID3_DIP_joint" pos="0.07 0 0" axis="0 0 1" range="0 1.5708"/>
+              <geom name="ID3_FIN_geom" size="0.035 0.0175 0.0175" pos="0.035 0 0" type="box" rgba="1 0.5 0.5 0.5"/>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <position name="ID1_ROT_joint_pos" joint="ID1_ROT_joint" ctrlrange="-90 0" timeconst="1"/>
+    <position name="ID1_ABD_joint_pos" joint="ID1_ABD_joint" ctrlrange="-90 90" timeconst="1"/>
+    <position name="ID1_PIP_joint_pos" joint="ID1_PIP_joint" ctrlrange="0 90" timeconst="1"/>
+    <position name="ID1_DIP_joint_pos" joint="ID1_DIP_joint" ctrlrange="0 90" timeconst="1"/>
+    <position name="ID2_ROT_joint_pos" joint="ID2_ROT_joint" ctrlrange="-90 0" timeconst="1"/>
+    <position name="ID2_ABD_joint_pos" joint="ID2_ABD_joint" ctrlrange="-90 90" timeconst="1"/>
+    <position name="ID2_PIP_joint_pos" joint="ID2_PIP_joint" ctrlrange="0 90" timeconst="1"/>
+    <position name="ID2_DIP_joint_pos" joint="ID2_DIP_joint" ctrlrange="0 90" timeconst="1"/>
+    <position name="ID3_ROT_joint_pos" joint="ID3_ROT_joint" ctrlrange="-90 0" timeconst="1"/>
+    <position name="ID3_ABD_joint_pos" joint="ID3_ABD_joint" ctrlrange="-90 90" timeconst="1"/>
+    <position name="ID3_PIP_joint_pos" joint="ID3_PIP_joint" ctrlrange="0 90" timeconst="1"/>
+    <position name="ID3_DIP_joint_pos" joint="ID3_DIP_joint" ctrlrange="0 90" timeconst="1"/>
+  </actuator>
+</mujoco>
