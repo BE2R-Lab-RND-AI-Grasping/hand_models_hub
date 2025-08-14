@@ -26,6 +26,12 @@ The hand model generation is used via [mjSpec](https://mujoco.readthedocs.io/en/
 
 run ```python run_hand.py```
 
+Finger module consists from 4 joints - 3 for spherical (rotation + abduction + PIP) and 1 for DIP:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f13afd61-8f29-4442-9b0d-a58ad85860b8" height="300px" />
+</p>
+
 
 ## DIP-FLEX
 The project has 1 model for closed-chained underactuatied fingers mechanism and 4 models with open-chained models. 2 scripts are added for the quick start.
