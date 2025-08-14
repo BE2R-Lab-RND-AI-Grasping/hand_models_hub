@@ -22,7 +22,7 @@ the project is at
     |+-- Code
 ```
 
-run ```bash python run_hand.py```
+run ```python run_hand.py```
 
 
 ## DIP-FLEX
