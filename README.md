@@ -22,7 +22,7 @@ the project is at
     |+-- Code
 ```
 
-The hand model generation is used via [mjSpec]{https://mujoco.readthedocs.io/en/stable/programming/modeledit.html}
+The hand model generation is used via [mjSpec](https://mujoco.readthedocs.io/en/stable/programming/modeledit.html)
 
 run ```python run_hand.py```
 
