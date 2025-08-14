@@ -32,6 +32,7 @@ Finger module consists from 4 joints - 3 for spherical (rotation + abduction + P
   <img src="https://github.com/user-attachments/assets/f13afd61-8f29-4442-9b0d-a58ad85860b8" height="300px" />
 </p>
 
+Red primitives can vary in lenghts, gray ones are fixed for compactness. Green palm is generated automatically as bounding box enveloping root bodies for all fingers.
 
 ## DIP-FLEX
 The project has 1 model for closed-chained underactuatied fingers mechanism and 4 models with open-chained models. 2 scripts are added for the quick start.
