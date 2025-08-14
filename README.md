@@ -12,6 +12,20 @@ conda activate DIP-Flex_env
 
 ## Models
 
+## 12hand
+The project includes 12 DOF 3 fingered hand with fully opened kinematics
+
+the project is at 
+
+```bash
++--12hand
+    |+-- Code
+```
+
+run ```bash python run_hand.py```
+
+
+## DIP-FLEX
 The project has 1 model for closed-chained underactuatied fingers mechanism and 4 models with open-chained models. 2 scripts are added for the quick start.
 
 ```bash
