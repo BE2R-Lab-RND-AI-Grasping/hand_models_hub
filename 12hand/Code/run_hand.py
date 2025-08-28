@@ -11,7 +11,7 @@ def add_finger(spec, root_pos, root_euler, finger_id, length1, length2):
     Добавляет цепочку фаланг пальца (ROT, ABD, PIP, DIP, FIN) в spec.worldbody.
     Возвращает ссылку на тело ROT.
     """
-        
+
     # Корень вращения (ROT)
     ROT = spec.worldbody.add_body(
         name=f"ID{finger_id}_ROT",

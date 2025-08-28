@@ -1,7 +1,7 @@
 <mujoco>
 
-    <option timestep="1e-5"/>
-    <option gravity="0 0 0"/>
+    <option timestep="1e-4"/>
+    <option gravity="0 0 -9.81"/>
     <option integrator="implicitfast"/>
     <!--Euler, RK4, implicit, implicitfast-->
 
@@ -24,6 +24,8 @@
 
         
     </worldbody>
+
+    
 
 
 </mujoco>

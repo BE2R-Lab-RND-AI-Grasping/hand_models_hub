@@ -1,7 +1,7 @@
 <mujoco model="MuJoCo Model">
   <compiler angle="radian"/>
 
-  <option timestep="1e-05" gravity="0 0 0" integrator="implicitfast"/>
+  <option timestep="0.0001" integrator="implicitfast"/>
 
   <default>
     <joint armature="0.01" frictionloss="0.01"/>
