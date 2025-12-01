@@ -1,4 +1,4 @@
-#NEW HAND
+# NEW HAND
 
 This hand has three fingers:
   1) thumb with 3 DoF
