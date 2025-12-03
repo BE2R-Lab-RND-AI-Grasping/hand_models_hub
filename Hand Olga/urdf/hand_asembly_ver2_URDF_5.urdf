@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="hand_asembly_ver2_URDF_5">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0089152 0.0037386 0.033472"
+        rpy="0 0 0" />
+      <mass
+        value="0.14441" />
+      <inertia
+        ixx="5.0656E-05"
+        ixy="-1.7172E-06"
+        ixz="-4.1779E-06"
+        iyy="0.00013332"
+        iyz="2.3836E-06"
+        izz="0.00016971" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="proximal_thumb">
+    <inertial>
+      <origin
+        xyz="-0.015654 0.029955 0.02991"
+        rpy="0 0 0" />
+      <mass
+        value="0.1524" />
+      <inertia
+        ixx="4.3343E-05"
+        ixy="7.7914E-06"
+        ixz="-8.2283E-08"
+        iyy="4.109E-05"
+        iyz="-8.6485E-08"
+        izz="4.2646E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="proximal_thumb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="proximal_thumb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_proximal_thumb"
+    type="revolute">
+    <origin
+      xyz="-0.05532 -0.00754 0.0075"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="proximal_thumb" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="mideal_thumb">
+    <inertial>
+      <origin
+        xyz="0.00038305 -0.0013227 0.042746"
+        rpy="0 0 0" />
+      <mass
+        value="0.080951" />
+      <inertia
+        ixx="2.2936E-05"
+        ixy="-2.4579E-07"
+        ixz="-1.4838E-07"
+        iyy="2.9321E-05"
+        iyz="7.5298E-07"
+        izz="1.4994E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="mideal_thumb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="mideal_thumb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_mideal_thumb"
+    type="revolute">
+    <origin
+      xyz="-0.024495 0.05232 0.05561"
+      rpy="0 0 0" />
+    <parent
+      link="proximal_thumb" />
+    <child
+      link="mideal_thumb" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="1.0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="distal_thumb">
+    <inertial>
+      <origin
+        xyz="0.00023967 -0.00041638 0.034377"
+        rpy="0 0 0" />
+      <mass
+        value="0.025098" />
+      <inertia
+        ixx="1.1258E-05"
+        ixy="-1.1272E-11"
+        ixz="4.9029E-12"
+        iyy="1.6125E-05"
+        iyz="6.5286E-08"
+        izz="9.0646E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="distal_thumb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="distal_thumb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_distal_thumb"
+    type="revolute">
+    <origin
+      xyz="0 0 0.05861"
+      rpy="0 0 0" />
+    <parent
+      link="mideal_thumb" />
+    <child
+      link="distal_thumb" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="proximal_finger_first">
+    <inertial>
+      <origin
+        xyz="0.000296203582652046 0.0006516973139282 0.0249998780074845"
+        rpy="0 0 0" />
+      <mass
+        value="0.0675423673234977" />
+      <inertia
+        ixx="1.63603804669836E-05"
+        ixy="-7.61426068978448E-08"
+        ixz="1.24396838964321E-08"
+        iyy="1.91615017103963E-05"
+        iyz="2.48697806610957E-07"
+        izz="9.81866259462588E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="proximal_finger_first.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="proximal_finger_first.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_proximal_finger_first"
+    type="fixed">
+    <origin
+      xyz="-0.0302 0.04346 0.025"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="proximal_finger_first" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="mideal_finger_first">
+    <inertial>
+      <origin
+        xyz="0.000383050288938834 -0.00132273624630646 0.0427464912817172"
+        rpy="0 0 0" />
+      <mass
+        value="0.0809511181244797" />
+      <inertia
+        ixx="2.29356455586384E-05"
+        ixy="-2.4579011109225E-07"
+        ixz="-1.48376826392739E-07"
+        iyy="2.9320679485353E-05"
+        iyz="7.52978669619452E-07"
+        izz="1.49942065418516E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="mideal_finger_first.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="mideal_finger_first.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_mideal_finger_first"
+    type="revolute">
+    <origin
+      xyz="0.000375 0.0014 0.03811"
+      rpy="0 0 0" />
+    <parent
+      link="proximal_finger_first" />
+    <child
+      link="mideal_finger_first" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="1.0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="distal_finger_first">
+    <inertial>
+      <origin
+        xyz="0.000239668381832973 -0.000416380702709402 0.0343767364418331"
+        rpy="0 0 0" />
+      <mass
+        value="0.0250979032594345" />
+      <inertia
+        ixx="1.12577466975426E-05"
+        ixy="-1.12635631190532E-11"
+        ixz="4.90657935852437E-12"
+        iyy="1.61247763423673E-05"
+        iyz="6.52862250239253E-08"
+        izz="9.06461848927077E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="distal_finger_first.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="distal_finger_first.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_distal_finger_first"
+    type="revolute">
+    <origin
+      xyz="0 0 0.05861"
+      rpy="0 0 0" />
+    <parent
+      link="mideal_finger_first" />
+    <child
+      link="distal_finger_first" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="proximal_finger_second">
+    <inertial>
+      <origin
+        xyz="0.000296203582651838 0.000651697313928203 0.024999878007485"
+        rpy="0 0 0" />
+      <mass
+        value="0.0675423673234979" />
+      <inertia
+        ixx="1.63603804669837E-05"
+        ixy="-7.61426068978491E-08"
+        ixz="1.24396838964255E-08"
+        iyy="1.91615017103964E-05"
+        iyz="2.48697806610942E-07"
+        izz="9.81866259462591E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="proximal_finger_second.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="proximal_finger_second.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_proximal_finger_second"
+    type="fixed">
+    <origin
+      xyz="0.0196 0.04346 0.025"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="proximal_finger_second" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="mideal_finger_second">
+    <inertial>
+      <origin
+        xyz="0.00038305028189406 -0.00132273624605782 0.0427464912762848"
+        rpy="0 0 0" />
+      <mass
+        value="0.0809511180962864" />
+      <inertia
+        ixx="2.29356455571759E-05"
+        ixy="-2.457901112516E-07"
+        ixz="-1.4837682086602E-07"
+        iyy="2.93206794805552E-05"
+        iyz="7.52978668851671E-07"
+        izz="1.49942065386106E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="mideal_finger_second.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="mideal_finger_second.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_mideal_finger_second"
+    type="revolute">
+    <origin
+      xyz="0.000375 0.0014 0.03811"
+      rpy="0 0 0" />
+    <parent
+      link="proximal_finger_second" />
+    <child
+      link="mideal_finger_second" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="distal_finger_second">
+    <inertial>
+      <origin
+        xyz="0.000239666608695788 -0.000416382279528527 0.0343767375660755"
+        rpy="0 0 0" />
+      <mass
+        value="0.0250978999147694" />
+      <inertia
+        ixx="1.12577462481103E-05"
+        ixy="-1.07761873356734E-11"
+        ixz="4.59506151653348E-12"
+        iyy="1.61247756109098E-05"
+        iyz="6.52859775044248E-08"
+        izz="9.06461760256706E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="distal_finger_second.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="distal_finger_second.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_distal_finger_second"
+    type="revolute">
+    <origin
+      xyz="0 0 0.05861"
+      rpy="0 0 0" />
+    <parent
+      link="mideal_finger_second" />
+    <child
+      link="distal_finger_second" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
