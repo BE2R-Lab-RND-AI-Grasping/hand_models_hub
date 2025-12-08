@@ -36,11 +36,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="-0.023 0.0 0.03"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="base_link.STL" />
+        <box size="0.13 0.08 0.056" />
       </geometry>
     </collision>
   </link>
@@ -74,15 +73,6 @@
           rgba="0.7 0.7 0.8 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="proximal_thumb.STL" />
-      </geometry>
-    </collision>
   </link>
   <joint
     name="joint_proximal_thumb"
@@ -99,8 +89,8 @@
     <limit
       lower="-3.14"
       upper="0"
-      effort="0"
-      velocity="0" />
+      effort="0.35"
+      velocity="1." />
   </joint>
   <link
     name="mideal_thumb">
@@ -134,11 +124,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.005 0.045"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="mideal_thumb.STL" />
+        <box size="0.04 0.03 0.05" />
       </geometry>
     </collision>
   </link>
@@ -157,8 +146,8 @@
     <limit
       lower="0"
       upper="1.0"
-      effort="0"
-      velocity="0" />
+      effort="0.35"
+      velocity="1." />
   </joint>
   <link
     name="distal_thumb">
@@ -192,11 +181,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.005 0.045"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="distal_thumb.STL" />
+        <box size="0.04 0.03 0.04" />
       </geometry>
     </collision>
   </link>
@@ -215,8 +203,8 @@
     <limit
       lower="-1.57"
       upper="1.57"
-      effort="0"
-      velocity="0" />
+      effort="0.35"
+      velocity="1." />
   </joint>
   <link
     name="proximal_finger_first">
@@ -248,15 +236,6 @@
           rgba="0.7 0.7 0.8 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="proximal_finger_first.STL" />
-      </geometry>
-    </collision>
   </link>
   <joint
     name="joint_proximal_finger_first"
@@ -303,11 +282,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.005 0.045"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="mideal_finger_first.STL" />
+        <box size="0.04 0.03 0.04" />
       </geometry>
     </collision>
   </link>
@@ -326,8 +304,8 @@
     <limit
       lower="0"
       upper="1.0"
-      effort="0"
-      velocity="0" />
+      effort="0.35"
+      velocity="1." />
   </joint>
   <link
     name="distal_finger_first">
@@ -361,11 +339,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.005 0.045"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="distal_finger_first.STL" />
+        <box size="0.04 0.03 0.04" />
       </geometry>
     </collision>
   </link>
@@ -384,8 +361,8 @@
     <limit
       lower="-1.57"
       upper="1.57"
-      effort="0"
-      velocity="0" />
+      effort="0.35"
+      velocity="1." />
   </joint>
   <link
     name="proximal_finger_second">
@@ -417,15 +394,6 @@
           rgba="0.7 0.7 0.8 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="proximal_finger_second.STL" />
-      </geometry>
-    </collision>
   </link>
   <joint
     name="joint_proximal_finger_second"
@@ -472,11 +440,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.005 0.045"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="mideal_finger_second.STL" />
+        <box size="0.04 0.03 0.04" />
       </geometry>
     </collision>
   </link>
@@ -491,12 +458,12 @@
     <child
       link="mideal_finger_second" />
     <axis
-      xyz="-1 0 0" />
+      xyz="1 0 0" />
     <limit
       lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      upper="1.0"
+      effort="0.35"
+      velocity="1" />
   </joint>
   <link
     name="distal_finger_second">
@@ -530,11 +497,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.005 0.045"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="distal_finger_second.STL" />
+        <box size="0.04 0.03 0.04" />
       </geometry>
     </collision>
   </link>
@@ -549,11 +515,11 @@
     <child
       link="distal_finger_second" />
     <axis
-      xyz="-1 0 0" />
+      xyz="1 0 0" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      lower="-1.57"
+      upper="1.57"
+      effort="0.35"
+      velocity="1." />
   </joint>
 </robot>
